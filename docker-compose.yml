@@ -3,7 +3,7 @@ version: '3'
 services:
   filebeat:
     hostname: filebeat
-    image: weschen/filebeat
+    image: filebeat
     build:
       context: filebeat
       dockerfile: Dockerfile
@@ -24,7 +24,7 @@ services:
       - 5601:5601
   logstash: 
     hostname: logstash 
-    image: weschen/logstash
+    image: logstash
     build:
       context: logstash
       dockerfile: Dockerfile
@@ -36,7 +36,7 @@ services:
       - elasticsearch
   elasticsearch:
     hostname: elasticsearch
-    image: weschen/elasticsearch
+    image: elasticsearch
     build:
       context: elasticsearch
       dockerfile: Dockerfile
